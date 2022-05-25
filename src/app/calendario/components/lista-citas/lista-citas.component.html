@@ -1,0 +1,8 @@
+<div class="mt-5">
+  <h5 class="alert alert-info">Citas:</h5>
+  <ul class="list-group">
+    <li *ngFor="let cita of listaCitas; let i = index" class="list-group-item">
+      <span class="badge bg-info me-2">{{ cita.fecha }} </span><span class="badge bg-success me-2">{{ cita.hora }} h</span>  {{ cita.textoCita }}
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,15 @@
+<div class="mt-5">
+  <h5 class="alert alert-warning">Alarmas:</h5>
+  <ul class="list-group">
+    <li *ngFor="let alarma of listaAlarmas; let i = index" class="list-group-item">
+      <span class="badge bg-info">{{ alarma.hora }}</span> {{ alarma.textoAlarma }} -
+      <span *ngIf="alarma.lunes" class="badge bg-info me-1">L</span>
+      <span *ngIf="alarma.martes" class="badge bg-info me-1">M</span>
+      <span *ngIf="alarma.miercoles" class="badge bg-info me-1">X</span>
+      <span *ngIf="alarma.jueves" class="badge bg-info me-1">J</span>
+      <span *ngIf="alarma.viernes" class="badge bg-info me-1">V</span>
+      <span *ngIf="alarma.sabado" class="badge bg-info me-1">S</span>
+      <span *ngIf="alarma.domingo" class="badge bg-info me-1">D</span>
+    </li>
+  </ul>
+</div>
