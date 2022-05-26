@@ -39,4 +39,5 @@ export class ListaCitasService {
 
     return listaCitas;
   }
+
 }

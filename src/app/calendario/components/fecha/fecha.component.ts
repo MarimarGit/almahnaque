@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-fecha',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fecha.component.css']
 })
 export class FechaComponent implements OnInit {
-  public fecha: string;
+  public fecha: Date;
+  @Input() public esFestivo: boolean; //le pasaré este dato desde el padre
 
   constructor() {
-    this.fecha = new Date().toDateString();
+    this.fecha = new Date();
+    this.esFestivo = false;
    }
 
   ngOnInit(): void {
